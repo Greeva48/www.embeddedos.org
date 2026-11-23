@@ -114,7 +114,9 @@ describe("per-route metadata overrides stay in lockstep", () => {
     });
     expect(titleFrom(rendered)).toBe(TITLE_OVERRIDES["/"]);
     expect(buildTitle("whatever heading", "/")).toBe(TITLE_OVERRIDES["/"]);
-    expect(TITLE_OVERRIDES["/"]).toContain("Physical AI");
+    expect(TITLE_OVERRIDES["/"]).toBe(
+      "EmbeddedOS: Open Source for Physical AI"
+    );
   });
 
   it("applies the same description overrides in both implementations", () => {
